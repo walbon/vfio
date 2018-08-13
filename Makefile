@@ -1,15 +1,15 @@
 
 compile : 
-	gcc -g -o bug170313.exe bug170313.c 
+	gcc -g -o vfio_probing.exe vfio_probing.c 
 
 run : compile
 	@read -p "Enter the address: " addr;\
-	sudo ./bug170313.exe $$addr
+	sudo ./vfio_probing.exe $$addr
 
 clean : 
-	rm bug170313.exe
+	rm vfio_probing.exe
 
 gdb : compile
-	gdb bug170313.exe
+	gdb vfio_probing.exe
 
 all : compile run
