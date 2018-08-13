@@ -10,11 +10,11 @@
 int main(int argc, char *argv[])
 {
     if (!argv[1]) {
-        fprintf(stderr, "missing address");
+        fprintf(stderr, "missing address\n");
         return 1;
     }
 
-    unsigned long io_base = strtol(argv[1],NULL,16); // lspci deve retornar
+    unsigned long io_base = strtol(argv[1],NULL,16); // lspci -v Memory address
     void *io_mem;
     int iofd;
     int pagesize;
